@@ -5,8 +5,8 @@ export const bookings = pgTable('bookings', {
   id: uuid('id').primaryKey().defaultRandom(),
   roomId: uuid('room_id').references(() => rooms.id).notNull(),
   guestName: varchar('guest_name', { length: 100 }).notNull(),
-  checkIn: date('check_in').notNull(),
-  checkOut: date('check_out').notNull(),
+  checkIn: date('check_in', {mode: 'date'}).notNull(),
+  checkOut: date('check_out',{mode:'date'}).notNull(),
   status: varchar('status', { length: 20 }).default('CONFIRMED').notNull(),
   createdAt: timestamp('created_at').defaultNow().notNull(),
 });
