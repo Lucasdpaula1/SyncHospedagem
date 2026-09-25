@@ -3,6 +3,6 @@ DATABASE_URL= "postgres://staysync_user:staysync_pass123@postgres:5432/staysync_
 REDIS_HOST="redis"
 REDIS_PORT= 6379
 
-POSTGRES_USER= postgres
-POSTGRES_PASSWORD=postgrespassword
+POSTGRES_USER=staysync_user
+POSTGRES_PASSWORD=staysync_pass123
 POSTGRES_DB=staysync_db
